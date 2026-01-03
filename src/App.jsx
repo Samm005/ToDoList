@@ -47,6 +47,17 @@ function App() {
     });
   }
 
+  function editTask(id, newTitle) {
+    setTasks((currentTask) => {
+      return currentTask.map((task) => {
+        if (task.id === id) {
+          return { ...task, title: newTitle };
+        }
+        return task;
+      });
+    });
+  }
+
   return (
     <div className="todo-container">
       <Header />
@@ -60,7 +71,12 @@ function App() {
         <button>Add a new task </button>
       </form>
       <h1 className="todo-heading">To-do List</h1>
-      <ToDoList tasks={tasks} toggle={toggle} deleteTask={deleteTask} />
+      <ToDoList
+        tasks={tasks}
+        toggle={toggle}
+        deleteTask={deleteTask}
+        editTask={editTask}
+      />
     </div>
   );
 }
