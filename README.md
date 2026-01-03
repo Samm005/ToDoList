@@ -35,3 +35,11 @@ The application integrates localStorage, allowing it to persist user data even a
    npm run dev
 
 5. Open browser and go to the link provided by vite
+
+## Author
+
+Samudyatha Karanth
+
+## GitHub link
+
+https://github.com/Samm005/ToDoList
