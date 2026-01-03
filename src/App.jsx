@@ -52,6 +52,7 @@ function App() {
         <button>Add a new task </button>
       </form>
       <h1 className="todo-heading">To-do List</h1>
+      <ToDoList tasks={tasks} toggle={toggle} deleteTask={deleteTask} />
     </div>
   );
 }
