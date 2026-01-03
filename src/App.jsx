@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ToDoList from "./components/ToDoList";
 import Header from "./components/Header";
 import "./App.css";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const StoredValue = localStorage.getItem("Items");
+    if (StoredValue == null) return [];
+
+    return JSON.parse(StoredValue);
+  });
   const [newItem, setnewItem] = useState("");
 
+  useEffect(() => {
+    localStorage.setItem("Items", JSON.stringify(tasks));
+  }, [tasks]);
   function handleSubmit(e) {
     e.preventDefault();
 
