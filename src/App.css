@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #dfe61d, #667fee);
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-heading {
+  font-size: 50px;
+  color: black;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: x-large;
+  width: 450px;
+  height: 200px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-input {
+  height: 50px;
+  padding: 10px;
+  margin: 0px 10px 30px 10px;
+  width: 350px;
+  border-radius: 10px;
+}
